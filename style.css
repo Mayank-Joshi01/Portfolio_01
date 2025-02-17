@@ -1,0 +1,457 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Roboto", serif;
+}
+
+body{
+    background-color: black;
+    color: white;
+    scrollbar-width: 0;
+    
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+/* < ------------------ Header ------------------ > */
+
+#header{
+    width: 100%;
+    height:100vh;
+    background-image: url('images/background.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.container{
+    padding:10px 10%;
+}
+    
+
+/* < ------------------ Navbar ------------------ > */
+
+nav{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo{
+    height: 60px;
+}
+
+nav ul{
+    z-index: 2;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    display: inline-block;
+    position: relative;
+}
+
+nav ul li a::after{
+    content:"";
+    display:block;
+    width: 0px;
+    height: 3px;
+    background-color: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: width 0.5s ease-in-out;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+
+ /* < ------------------ Header Text ------------------ > */
+
+.header-text{
+    font-size: 20px;
+    margin-top: 20%;
+}
+
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+.header-text h1 span{
+    color: #ff004f;
+}
+
+
+/* < ------------------ About ------------------ > */
+
+#about{
+    padding: 80px 0;
+    color: #ababab;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    flex-basis: 35%;
+}
+
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.about-col-2{
+    flex-basis: 60%;
+}
+
+.sub-title{
+    font-size: 60px;
+    font-weight: 6000;
+    color: #ffffff;
+}
+
+.tab-titles{
+display: flex;
+margin: 20px 0px 40px;
+}
+
+.tab-links{
+margin-right: 50px;
+cursor: pointer;
+font-size: 18px;
+font-weight: 500;
+position: relative;
+}
+
+.tab-links::after{
+content: "";
+display: block;
+width: 0px;
+height: 3px;
+background-color: #ff004f;
+position: absolute;
+left: 0px;
+bottom: -8px;
+transition: width 0.5s ease-in-out;
+}
+
+.tab-links.active-link::after{
+width: 50%;
+}
+
+.tab-contents ul li{
+list-style: none;
+margin: 15px 0px;
+}
+
+.tab-contents ul li span{
+color: #ff004f;
+font-size: 14px;
+}
+
+.tab-contents{
+    display: none;
+}
+
+.tab-contents.active-tab{
+    display: block;
+}
+
+
+/* < ------------------ Services ------------------ > */
+
+#services{
+    padding: 30px 0;
+}
+
+.services-list{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.services-list div{
+    background-color: #262626;
+    padding: 40px;
+    border-radius: 15px;
+    font-size: 13px;
+    font-weight: 300;
+    transition: transform 0.5s, background-color 0.5s;
+}
+
+.services-list div i{
+font-size: 50px;
+margin-bottom: 30px;
+}
+
+.services-list div h2{
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.services-list div a{
+    color: #ffff;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 30px;
+    font-size: 13px;
+}
+
+.services-list div:hover{
+    transform: translateY(-10px);
+    background-color: #ff004f;
+}
+
+
+/* < ------------------ Projects ------------------ > */
+
+#projects{
+    padding: 50px 0;
+}
+
+.projects-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.project{
+    position:relative;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.project img{
+    width: 100%;
+    border-radius: 15px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.project:hover img{
+    transform: scale(1.1);
+}
+
+.project .layer{
+    height: 100%;
+    width: 100%;
+    background:linear-gradient(rgba(0,0,0,0.6),#ff004f);
+    position: absolute;
+    left: 0;
+    bottom: -100%;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: bottom 0.5s ease-in-out;
+}
+
+.project:hover .layer{
+    bottom: 0;
+}
+.project .layer h3{
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.project .layer a{
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin-top: 20px;
+    line-height: 60px;
+    height: 60px;
+    background-color: #fff;
+    color: #ff004f;
+    text-align: center;
+    width: 60px;
+    border-radius: 50%;
+}
+
+.btn{
+    display: block;
+    margin: 50px auto; /* To use it for centering the div make sure to give some width to the div */
+    width: fit-content;
+    padding:14px 40px;
+    border: 1px solid #ff004f;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #ffff;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.btn:hover{
+    background-color: #ff004f;
+}
+
+
+/* < ------------------ Contact ------------------ > */
+
+.contact-left-col{
+    flex-basis: 35%;
+}
+
+.contact-right-col{
+    flex-basis: 60%;
+}
+
+.contact-left-col p{
+    margin-top: 15px;
+}
+
+.contact-left-col p i{
+    margin-left: 15px;
+    font-size: 25px ;
+    color: #ff004f;
+}
+
+.social-icons{
+    margin-top: 20px;
+}
+
+.social-icons a{
+    display: inline-block;
+    text-decoration: none;
+    margin-right: 15px;
+    font-size: 30px;
+    color:#ababab;
+    transition: transform 0.5s ease-in-out;
+}
+
+.social-icons a:hover{
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+
+form input, form textarea{
+  width: 100%;
+  height:100%;
+  border: 0;
+  padding:15px;
+  margin:10px 0;
+  border-radius: 6px;
+  background-color: #262626;
+  color: #ffffff;
+  outline: none;
+}
+
+form .btn2{
+cursor: pointer;
+font-size: 18px;
+}
+.btn2{
+    display: inline-block;
+    background-color: #ff004f;
+}
+
+
+/* < ------------------ Footer ------------------ > */
+
+.copyright{
+    text-align: center;
+    width: 100%;
+    font-weight: 300;
+    margin-top: 20px;
+    background-color: #262626;
+    padding:25px 0px;
+}
+
+.copyright i {
+    color: #ff004f;
+}
+
+
+/* < ------------------ Message ------------------ > */
+#msg{
+    font-size: 20px;
+    color: greenyellow;
+    margin-top: -25px;
+}
+
+/* < --------- Responsiveness ----------------> */
+
+nav .fa-solid{
+    display: none;
+}
+
+
+@media(max-width: 600px){
+    #header{
+        background-image:url('images/phone-background.png');
+    }
+    .header-text{
+        margin-top: 100%;
+        font-weight: 16px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    nav .fa-solid{
+        display: block;
+        color: #ffffff;
+        font-size: 25px;
+        cursor: pointer;
+    }
+    nav ul{
+        position: fixed;
+        right: 0;
+        top: 0;
+        background-color: #ff004f;
+        width: 200px;
+        height: 100vh;
+        right: -200px;
+        padding-top: 50px;
+        transition: right 0.5s ease-in-out;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        left: 25px;
+        top: 25px;
+    }
+    .about-col-1,.about-col-2{
+        flex-basis: 100%;
+    }
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right: 22px;
+    }
+    .contact-left-col,.contact-right-col{
+        flex-basis: 100%;
+    }
+    .contact-left-col{
+        margin-bottom: 30px;
+    }
+}
