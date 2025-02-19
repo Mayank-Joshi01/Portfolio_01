@@ -112,6 +112,9 @@ nav ul li a:hover::after{
 
 .about-col-1{
     flex-basis: 35%;
+    animation: appear_left 1s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0 cover 50%;
 }
 
 .about-col-1 img{
@@ -121,6 +124,9 @@ nav ul li a:hover::after{
 
 .about-col-2{
     flex-basis: 60%;
+    animation: appear_right 1s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
 }
 
 .sub-title{
@@ -199,6 +205,26 @@ font-size: 14px;
     transition: transform 0.5s, background-color 0.5s;
 }
 
+    /* Adding Animation to the services list */
+
+.services-list div:nth-child(1){
+    animation: appear_left 1s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
+.services-list div:nth-child(2){
+    animation: appear_up 1s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
+.services-list div:nth-child(3){
+    animation: appear_right 1s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
+
+    /* Animation Ends */
+
 .services-list div i{
 font-size: 50px;
 margin-bottom: 30px;
@@ -235,6 +261,25 @@ margin-bottom: 30px;
     grid-gap: 40px;
     margin-top: 50px;
 }
+   /* Adding Animation to the projects list */
+
+   .projects-list div:nth-child(1){
+    animation: appear_left 1s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
+.projects-list div:nth-child(2){
+    animation: appear_up 1s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
+.projects-list div:nth-child(3){
+    animation: appear_right 1s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
+
+    /* Animation Ends */
 
 .project{
     position:relative;
@@ -315,10 +360,16 @@ margin-bottom: 30px;
 
 .contact-left-col{
     flex-basis: 35%;
+    animation: appear_left 1s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
 }
 
 .contact-right-col{
     flex-basis: 60%;
+    animation: appear_right 1s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
 }
 
 .contact-left-col p{
@@ -400,6 +451,36 @@ nav .fa-solid{
     display: none;
 }
 
+ /* <------------ Animation -------------> */
+
+ @keyframes appear_left{
+    0%{
+        opacity:0;
+        transform: translateX(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }   
+}
+@keyframes appear_right{
+    0%{
+        opacity:0;
+        transform: translateX(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }   
+}
+@keyframes appear_up{
+    0%{opacity: 0;
+        transform: translateY(100px);
+    }
+    100%{opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 @media(max-width: 600px){
     #header{
