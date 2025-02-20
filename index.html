@@ -33,8 +33,18 @@
                 </ul>
                 <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
+
+            <div class="cube">
+                <div class="top"></div>
+                <div>
+                    <span style="--i:0"></span>
+                    <span style="--i:1"></span>
+                    <span style="--i:2"></span>
+                    <span style="--i:3"></span>
+                </div>
+</div>
             <div class="header-text">
-                <p>UI/UX Designer</p>
+                <p>Web Developer</p>
                 <h1>Hi, I'm <br>
                 <span>M</span>ayank <span>J</span>oshi</h1>
             </div>
@@ -48,11 +58,28 @@
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="images/user.png" alt="user image">
+                    <div class="secondary-div"></div>
+                    <div class="main-div">
+                    <h1>
+                        <span>M</span>
+                        <span>A</span>
+                        <span>Y</span>
+                        <span>A</span>
+                        <span>N</span>
+                        <span>K</span>
+                    </h1>
+                    <h1>
+                        <span>J</span>
+                        <span>O</span>
+                        <span>S</span>
+                        <span>H</span>
+                        <span>I</span>
+                    </h1>
+                </div>
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea accusamus natus recusandae veniam minus suscipit odit ullam dolor, incidunt ipsa omnis asperiores facilis modi adipisci aliquid accusantium? Deserunt pariatur ipsa architecto sapiente molestias. Consequuntur harum optio aut voluptates fugiat ea eaque suscipit voluptatum ut dolorem officia, animi facilis tenetur repudiandae itaque in quia culpa molestias dignissimos, incidunt debitis nobis veritatis excepturi! Consectetur molestiae velit sapiente nihil voluptatum at, nostrum pariatur assumenda praesentium, perspiciatis ullam ipsum consequatur corporis similique.</p>
+                    <p>Hi! I'm Mayank Joshi, a passionate web developer specializing in React, TypeScript, and modern front-end technologies. I love building responsive, user-friendly applications and have experience working with frameworks like Tailwind and Bootstrap. With a strong foundation in full-stack development, I enjoy turning ideas into functional, visually appealing websites. I'm always eager to learn, contribute to open-source projects, and stay updated with the latest web trends. Currently, I'm exploring opportunities to leverage my skills in real-world projects. Let’s connect and create something amazing together!</p>
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills',event)">Skills</p>
                         <p class="tab-links" onclick="opentab('education',event)">Education</p>
@@ -60,16 +87,16 @@
                     </div>
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
-                            <li> <span>UI/UX Design</span> <br> Experienced in designing user-friendly interfaces using Figma and Adobe XD.</li>
+                            <li> <span>UI/UX Design</span> <br> Experienced in designing user-friendly interfaces using Figma.</li>
                             <li> <span>Web Development</span> <br> Proficient in HTML, CSS, JavaScript, and modern frameworks like React and Vue.js.</li>
-                            <li> <span>App Development</span> <br> Skilled in building cross-platform mobile applications using Flutter and React Native.</li>
+                            <li> <span>Full Stack Development</span> <br> Skilled in building Full Stack Websites using MERN Stack and TypeScript.</li>
                         </ul>
                     </div>
                     
                     <div class="tab-contents" id="education">
                         <ul>
-                            <li> <span>Bachelor's in Computer Science</span> <br> XYZ University, 2020-2024.</li>
-                            <li> <span>Relevant Coursework</span> <br> Data Structures, Web Technologies, Mobile App Development, UI/UX Design.</li>
+                            <li> <span>Bachelor's in Computer Science</span> <br> NIT Uttarakhand, 2024-2028.</li>
+                            <li> <span>Relevant Coursework</span> <br> Web Development, Web Technologies,Full-stack Web Development, UI/UX Design.</li>
                             <li> <span>Certifications</span> <br> Google UX Design Certificate, Meta Front-End Developer Certificate.</li>
                         </ul>
                     </div>
@@ -93,7 +120,7 @@
      <div id="services">
         <div class="container">
         <h1 class="sub-title">My Services</h1>
-        <div class="services-list">
+        <!-- <div class="services-list">
             <div>
                 <i class="fa-solid fa-code"></i>
                 <h2>Web Development</h2>
@@ -108,10 +135,31 @@
             </div>
             <div>
                 <i class="fa-brands fa-app-store"></i>
-                <h2>App Development</h2>
+                <h2>Full Stack Web</h2>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod consectetur ullam adipisci, ex officia, laudantium nemo laboriosam tempora animi cum enim dolor veniam eius. Fugiat non cupiditate molestias laboriosam eligendi tenetur! Perspiciatis!</p>
                 <a href="">Learn more</a>
+            </div> -->
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Front-End Development</h2>
+                    <p>I specialize in building responsive, interactive, and user-friendly web applications using React, TypeScript, JavaScript, Tailwind, and Bootstrap. I focus on writing clean, efficient code to create seamless user experiences.</p>
+                    <a href="">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-paint-brush"></i>
+                    <h2>UI and UX Designing</h2>
+                    <p>I design intuitive and visually appealing user interfaces, ensuring a smooth user experience. I have experience in wireframing, prototyping, and implementing designs that enhance usability and accessibility.</p>
+                    <a href="">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-server"></i>
+                    <h2>Full-Stack Development</h2>
+                    <p>With experience in full-stack development, I build scalable web applications, handling both front-end and back-end technologies. I work with modern frameworks to create dynamic, data-driven websites.</p>
+                    <a href="">Learn more</a>
+                </div>
             </div>
+            
         </div>
     </div>
 </div>
@@ -122,7 +170,7 @@
 <div id="projects">
     <div class="container">
         <h1 class="sub-title">My Projects</h1>
-        <div class="projects-list">
+        <!-- <div class="projects-list">
             <div class="project">
                 <img src="images/work-1.png" alt="">
                 <div class="layer">
@@ -146,9 +194,36 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et facilis, autem, facere molestias tempore nobis, ullam doloremque sequi dolor quis quidem.</p>
                     <a href=""><i class="fa-solid fa-link"></i></a>
                 </div>
+            </div> -->
+            <div class="projects-list">
+                <div class="project">
+                    <img src="images/Project_1.jpg" alt="iNoteBook">
+                    <div class="layer">
+                        <h3>iNoteBook</h3>
+                        <p>A full-stack web application that allows users to securely save and manage their notes from anywhere. Built with React, Node.js, and MongoDB, it ensures data persistence and accessibility.</p>
+                        <a href="https://mayank-joshi01.github.io/iNoteBook/" target="_blank"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="images/Project_2.jpg" alt="NewsMonkey">
+                    <div class="layer">
+                        <h3>NewsMonkey</h3>
+                        <p>A dynamic React-based news website that fetches real-time news using API calls. Users can search for news, filter by categories (sports, science, crime, etc.), and get country-specific news.</p>
+                        <a href="https://mayank-joshi01.github.io/NewsMonkey/" target="_blank"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="images/project__3.jpg" alt="TextUtils">
+                    <div class="layer">
+                        <h3>TextUtils</h3>
+                        <p>A React-based text editing tool that allows users to manipulate text. Features include text-to-speech, uppercase/lowercase conversion, word count, and more for easy text formatting.</p>
+                        <a href="https://mayank-joshi01.github.io/TextUtils/" target="_blank"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
             </div>
+            
         </div>
-        <a href="" class="btn">See More</a>
+        <a  class="btn">See More</a>
     </div>
 </div>
 
@@ -160,13 +235,13 @@
         <div class="row">
             <div class="contact-left-col">
                 <h1>Contact Me</h1>
-                <p>email@email.com <i class="fa-solid fa-envelope"></i></p>
+                <p><a href="mailto:mayankjsohi.in.123@gmail.com">mayankjoshi.in.123@gamil.com <i class="fa-solid fa-envelope"></i></a></p>
                 <p>123-456-7890 <i class="fa-solid fa-phone"></i></p>
                 <div class="social-icons">
-                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
-                    <a href=""><i class="fa-brands fa-github"></i></a>
-                    <a href=""><i class="fa-brands fa-twitter"></i></a>
-                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/mayank-joshi-027b00325/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/Mayank-Joshi01" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://discord.gg/SBjzTgXZ" target="_blank"><i class="fa-brands fa-discord"></i></a>
+                    <a href="https://www.instagram.com/mayankjoshi.in.01/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                 </div>
             </div>
             <div class="contact-right-col">
